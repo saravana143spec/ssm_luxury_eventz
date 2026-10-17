@@ -1,0 +1,775 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSM Eventz | Party Planner - Tamil Nadu's Premier Celebration Experts</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                        },
+                        brand: {
+                            pink: '#FF6B9B',
+                            purple: '#6C5CE7',
+                            lightBg: '#FFFDF9',
+                            cardBg: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        hand: ['Caveat', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FFFDF9;
+            color: #1F2937;
+            overflow-x: hidden;
+        }
+        
+        .font-playfair { fontFamily: 'Playfair Display', serif; }
+        .font-handwriting { fontFamily: 'Caveat', cursive; }
+
+        /* Custom Animated Gradients */
+        .gradient-text {
+            background: linear-gradient(135deg, #d97706 0%, #FF6B9B 50%, #6C5CE7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-soft-gradient {
+            background: linear-gradient(180deg, #FFFDF9 0%, #FFF5F7 50%, #F4F0FF 100%);
+        }
+
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFFDF9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #fcd34d;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f59e0b;
+        }
+
+        /* Pulse subtle animation */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: floatSlow 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-amber-200 selection:text-amber-900">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-amber-600 via-rose-500 to-purple-600 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-sm">
+        <span>✨ Every Event Deserves Magic! 🎈 Book Now for Exclusive Offers on Decor & Photo Booth setups!</span>
+        <a href="tel:+919566047449" class="underline font-bold ml-2 hover:text-amber-200">Call +91 95660 47449</a>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-amber-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo & Name -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-amber-400 to-rose-400 p-0.5 shadow-md group-hover:scale-105 transition-transform">
+                        <div class="w-full h-full bg-white rounded-full flex items-center justify-center overflow-hidden">
+                            <img src="logo.png" onerror="this.src='https://placehold.co/100x100/fef3c7/b45309?text=SSM'" alt="SSM Logo" class="w-10 h-10 object-contain">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-extrabold tracking-tight text-amber-700 font-serif block leading-none">SSM Party Planner</span>
+                        <span class="text-[10px] tracking-widest uppercase font-semibold text-rose-500">Decor • Stalls • Entertainment • Memories</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-700">
+                    <a href="#services" class="hover:text-amber-600 transition">Services</a>
+                    <a href="#photobooth" class="hover:text-amber-600 transition">AI Photo Booth</a>
+                    <a href="#props" class="hover:text-amber-600 transition">Party Elements</a>
+                    <a href="#packages" class="hover:text-amber-600 transition">Packages</a>
+                    <a href="#enquiry" class="hover:text-amber-600 transition">Enquiry</a>
+                    <a href="https://www.instagram.com/ssmpartyplanner?obrf=cTBiczEydG40dmdm" target="_blank" class="text-rose-600 hover:text-rose-700 transition flex items-center space-x-1">
+                        <i class="fab font-xl fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </nav>
+
+                <!-- Book Now CTA -->
+                <div class="hidden sm:flex items-center space-x-3">
+                    <a href="#enquiry" class="bg-gradient-to-r from-amber-500 to-rose-500 hover:from-amber-600 hover:to-rose-600 text-white font-bold py-2.5 px-5 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 text-sm flex items-center space-x-2">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Book Event</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-gray-700 p-2 rounded-lg hover:bg-amber-50 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-amber-100 px-4 pt-2 pb-6 space-y-3">
+            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-semibold border-b border-gray-100">Services & Categories</a>
+            <a href="#photobooth" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-semibold border-b border-gray-100">AI Photo Booth & QR Sharing</a>
+            <a href="#props" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-semibold border-b border-gray-100">Party Props & Elements</a>
+            <a href="#enquiry" onclick="toggleMobileMenu()" class="block py-2 text-amber-600 font-bold border-b border-gray-100">Send Enquiry</a>
+            <a href="https://www.instagram.com/ssmpartyplanner?obrf=cTBiczEydG40dmdm" target="_blank" class="block py-2 text-rose-600 font-bold">Follow on Instagram @ssmpartyplanner</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-12 lg:py-20 bg-soft-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-amber-100 border border-amber-200 text-amber-800 text-xs sm:text-sm font-semibold mb-6">
+                        <span class="flex h-2 w-2 rounded-full bg-amber-500 animate-ping"></span>
+                        <span>Tamil Nadu's Premier Event Planner ✨</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight font-serif text-gray-900 leading-tight">
+                        Crafting Unforgettable <br class="hidden sm:inline">
+                        <span class="gradient-text">Celebrations & Magic</span>
+                    </h1>
+
+                    <p class="mt-6 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        From breath-taking stage decors and grand cold pyro entries to fun live food stalls, instant AI photo booths, and complete event photography — we turn your special days into unforgettable memories!
+                    </p>
+
+                    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#enquiry" class="w-full sm:w-auto bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition transform text-center text-base">
+                            🎉 Send Enquiry Now
+                        </a>
+                        <a href="https://wa.me/919566047449?text=Hi%20SSM%20Party%20Planner,%20I%20want%20to%20know%20more%20about%20your%20services!" target="_blank" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition transform text-center text-base flex items-center justify-center space-x-2">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Highlights Stats -->
+                    <div class="mt-12 grid grid-cols-3 gap-4 border-t border-amber-200/60 pt-6">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-amber-600">500+</div>
+                            <div class="text-xs sm:text-sm text-gray-600 font-medium">Events Managed</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-rose-500">100%</div>
+                            <div class="text-xs sm:text-sm text-gray-600 font-medium">Custom Decor</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-purple-600">4.9★</div>
+                            <div class="text-xs sm:text-sm text-gray-600 font-medium">Customer Rating</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Cards Carousel preview -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-sm sm:max-w-md">
+                        <!-- Decorative Backdrop Glowing Elements -->
+                        <div class="absolute -top-6 -left-6 w-64 h-64 bg-amber-300/30 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-rose-300/30 rounded-full blur-3xl"></div>
+
+                        <div class="relative glass-card rounded-3xl p-6 shadow-2xl border border-white/80">
+                            <div class="relative h-64 rounded-2xl overflow-hidden bg-gradient-to-tr from-amber-400 via-rose-300 to-purple-400 flex items-center justify-center text-white text-center p-6">
+                                <div class="space-y-3">
+                                    <span class="text-5xl">🎪</span>
+                                    <h3 class="text-2xl font-bold font-serif">SSM Party Planner</h3>
+                                    <p class="text-xs text-amber-100 font-medium">Stage Decor • Cold Pyro Entry • Live Stalls • AI Photo Booth</p>
+                                    <span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold">✨ Book Today for Best Rates</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 grid grid-cols-2 gap-3 text-center">
+                                <div class="p-3 rounded-xl bg-amber-50 border border-amber-100">
+                                    <span class="text-xl">🎂</span>
+                                    <div class="text-xs font-bold text-gray-800 mt-1">Birthdays & Weddings</div>
+                                </div>
+                                <div class="p-3 rounded-xl bg-rose-50 border border-rose-100">
+                                    <span class="text-xl">📸</span>
+                                    <div class="text-xs font-bold text-gray-800 mt-1">Instant Photo Prints</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: INSTANT PHOTO BOOTH & QR SHARING (From Screenshot 1000003688 & 1000003689) -->
+    <section id="photobooth" class="py-16 bg-amber-50/50 border-y border-amber-100/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-amber-600 font-extrabold text-xs tracking-widest uppercase bg-amber-100 px-3 py-1 rounded-full">● AI PHOTO BOOTH ●</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-serif text-blue-900 mt-3 leading-tight">
+                    Instant Photo Booth & QR Sharing
+                </h2>
+                <p class="mt-3 text-gray-600 text-sm sm:text-base">
+                    Get your printed photo instantly and download the digital copy by scanning the QR Code.
+                </p>
+            </div>
+
+            <!-- 4 Grid Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1: Instant Photography -->
+                <div class="bg-white p-6 rounded-3xl border-2 border-pink-300 shadow-sm hover:shadow-md transition text-center flex flex-col items-center justify-between">
+                    <div>
+                        <div class="text-5xl my-4 animate-float">📸</div>
+                        <h3 class="text-lg font-bold text-gray-900">Instant Photography</h3>
+                        <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+                            Professional DSLR photography with instant prints.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Instant Printing -->
+                <div class="bg-white p-6 rounded-3xl border-2 border-amber-300 shadow-sm hover:shadow-md transition text-center flex flex-col items-center justify-between">
+                    <div>
+                        <div class="text-5xl my-4 animate-float">🖨️</div>
+                        <h3 class="text-lg font-bold text-gray-900">Instant Printing</h3>
+                        <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+                            Take your printed photo home within seconds.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: QR Code Download -->
+                <div class="bg-white p-6 rounded-3xl border-2 border-amber-300 shadow-sm hover:shadow-md transition text-center flex flex-col items-center justify-between">
+                    <div>
+                        <div class="text-5xl my-4 animate-float">📱</div>
+                        <h3 class="text-lg font-bold text-gray-900">QR Code Download</h3>
+                        <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+                            Scan the QR Code to download your digital copy instantly.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: AI Face Search -->
+                <div class="bg-white p-6 rounded-3xl border-2 border-emerald-300 shadow-sm hover:shadow-md transition text-center flex flex-col items-center justify-between">
+                    <div>
+                        <div class="text-5xl my-4 animate-float">🤖</div>
+                        <h3 class="text-lg font-bold text-gray-900">AI Face Search</h3>
+                        <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+                            <span class="text-amber-600 font-bold block mb-1">Coming Soon</span>
+                            Upload your selfie and AI finds all your event photos automatically.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA Button -->
+            <div class="text-center mt-10">
+                <a href="https://wa.me/919566047449?text=Hi%20SSM%20Party%20Planner,%20I%20want%20to%20book%20the%20Instant%20Photo%20Booth%20%26%20QR%20Sharing%20service!" target="_blank" class="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-rose-500 via-amber-500 to-orange-500 hover:opacity-95 text-white font-bold py-3.5 px-8 rounded-full shadow-md text-sm sm:text-base transition transform hover:scale-105">
+                    <span>📅 BOOK PHOTO BOOTH</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 2: PARTY PROPS & ELEMENTS (From Screenshot 1000003690, 1000003691, & 1000003692) -->
+    <section id="props" class="py-16 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-rose-500 font-bold text-xs tracking-widest uppercase bg-rose-50 px-3 py-1 rounded-full">● EVERYTHING WE BRING ●</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-handwriting text-rose-500 text-4xl sm:text-5xl mt-3">
+                    Party Props & Elements 🎠
+                </h2>
+                <p class="mt-2 text-gray-600 text-sm sm:text-base">
+                    Everything you need for the perfect celebration!
+                </p>
+            </div>
+
+            <!-- Grid of 12 Props/Elements -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                
+                <!-- Prop 1 -->
+                <div class="bg-rose-50/40 p-5 rounded-2xl border border-rose-100 text-center hover:bg-rose-50 transition">
+                    <div class="text-4xl mb-2">🎈</div>
+                    <h4 class="font-bold text-gray-900 text-sm sm:text-base">Balloons</h4>
+                    <p class="text-xs text-gray-500 mt-1">Theme, foil & balloon arches</p>
+                </div>
+
+                <!-- Prop 2 -->
+                <div class="bg-amber-50/40 p-5 rounded-2xl border border-amber-100 text-center hover:bg-amber-50 transition">
+                    <div class="text-4xl mb-2">🎂</div>
+                    <h4 class="font-bold text-gray-900 text-sm sm:text-base">Cake Setup</h4>
+                    <p class="text-xs text-gray-500 mt-1">Cake table & dessert decor</p>
+                </div>
+
+                <!-- Prop 3 -->
+                <div class="bg-pink-50/40 p-5 rounded-2xl border border-pink-100 text-center hover:bg-pink-50 transition">
+                    <div class="text-4xl mb-2">🌸</div>
+                    <h4 class="font-bold text-gray-900 text-sm sm:text-base">Florals</h4>
+                    <p class="text-xs text-gray-500 mt-1">Fresh & artificial floral arrangements</p>
+                </div>
+
+                <!-- Prop 4 -->
+                <div class="bg-purple-50/40 p-5 rounded-2xl border border-purple-100 text-center hover:bg-purple-50 transition">
+                    <div class="text-4xl mb-2">🎊</div>
+                    <h4 class="font-bold text-gray-900 text-sm sm:text-base">Confetti</h4>
+                    <p class="text-xs text-gray-500 mt-1">Confetti poppers & cannons</p>
+                </div>
+
+                <!-- Prop 5 -->
+                <div class="bg-yellow-50/40 p-5 rounded-2xl border border-yellow-100 text-center hover:bg-yellow-50 transition">
+                    <div class="text-4xl mb-2">🕯️</div>
+                    <h4 class="font-bold text-gray-900 text-sm sm:text-base">Candles</h4>
+                    <p class="text-xs text-gray-500 mt-1">LED & pillar candle decor</p>
+                </div>
+
+                <!-- Prop 6 -->
+                <div class="bg-sky-50/40 p-5 rounded-2xl border border-sky-100 text-center hover:bg-sky-50 transition">
+                    <div class="text-4xl mb-2">🪅</div>
+                    <h4 class="font-bold text-gray-900 text-sm sm:text-base">Props Booth</h4>
+                    <p class="text-xs text-gray-500 mt-1">Photo props & fun accessories</p>
+                </div>
+
+                <!-- Prop 7 -->
+                <div class="bg-indigo-50/40 p-5 rounded-2xl border border-indigo-100 text-center hover:bg-indigo-50 transition">
+                    <div class="text-4xl mb-2">🎆</div>
+                    <h4 class="font-bold text-gray-900 text-sm sm:text-base">Pyro Effects</h4>
+                    <p class="text-xs text-gray-500 mt-1">Cold pyro, fog & LED sparks</p>
+                </div>
+
+                <!-- Prop 8 -->
+                <div class="bg-orange-50/40 p-5 rounded-2xl border border-orange-100 text-center hover:bg-orange-50 transition">
+                    <div class="text-4xl mb-2">🎁</div>
+                    <h4 class="font-bold text-gray-900 text-sm sm:text-base">Gift Table</h4>
+                    <p class="text-xs text-gray-500 mt-1">Styled gift & favor displays</p>
+                </div>
+
+                <!-- Prop 9 -->
+                <div class="bg-amber-50/40 p-5 rounded-2xl border border-amber-100 text-center hover:bg-amber-50 transition">
+                    <div class="text-4xl mb-2">💡</div>
+                    <h4 class="font-bold text-gray-900 text-sm sm:text-base">Fairy Lights</h4>
+                    <p class="text-xs text-gray-500 mt-1">String lights & LED curtains</p>
+                </div>
+
+                <!-- Prop 10 -->
+                <div class="bg-blue-50/40 p-5 rounded-2xl border border-blue-100 text-center hover:bg-blue-50 transition">
+                    <div class="text-4xl mb-2">🎤</div>
+                    <h4 class="font-bold text-gray-900 text-sm sm:text-base">Anchor & DJ</h4>
+                    <p class="text-xs text-gray-500 mt-1">Music, DJ & anchor services</p>
+                </div>
+
+                <!-- Prop 11 -->
+                <div class="bg-rose-50/40 p-5 rounded-2xl border border-rose-100 text-center hover:bg-rose-50 transition">
+                    <div class="text-4xl mb-2">🍫</div>
+                    <h4 class="font-bold text-gray-900 text-sm sm:text-base">Choc Fountain</h4>
+                    <p class="text-xs text-gray-500 mt-1">Chocolate & candy counters</p>
+                </div>
+
+                <!-- Prop 12 -->
+                <div class="bg-purple-50/40 p-5 rounded-2xl border border-purple-100 text-center hover:bg-purple-50 transition">
+                    <div class="text-4xl mb-2">📸</div>
+                    <h4 class="font-bold text-gray-900 text-sm sm:text-base">Photo Booth</h4>
+                    <p class="text-xs text-gray-500 mt-1">Instant photo booth setup</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3: 5 INTERACTIVE CATEGORIES OF PARTY MAGIC -->
+    <section id="services" class="py-16 bg-gradient-to-b from-amber-50/30 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-amber-600 font-extrabold text-xs tracking-widest uppercase bg-amber-100 px-3 py-1 rounded-full">● OUR SERVICES ●</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-serif text-gray-900 mt-3">
+                    5 Categories of Party Magic
+                </h2>
+                <p class="mt-2 text-gray-600 text-sm sm:text-base">
+                    Click any category tab below to explore what we offer for your event:
+                </p>
+            </div>
+
+            <!-- Category Tab Pill Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
+                <button onclick="switchCategory('decor')" id="tab-decor" class="cat-tab-btn active px-5 py-2.5 rounded-full font-bold text-sm transition-all shadow-sm bg-gradient-to-r from-amber-500 to-rose-500 text-white">
+                    🎀 Decoration
+                </button>
+                <button onclick="switchCategory('entry')" id="tab-entry" class="cat-tab-btn px-5 py-2.5 rounded-full font-bold text-sm transition-all bg-gray-100 text-gray-700 hover:bg-amber-100">
+                    ✨ Grand Entry
+                </button>
+                <button onclick="switchCategory('food')" id="tab-food" class="cat-tab-btn px-5 py-2.5 rounded-full font-bold text-sm transition-all bg-gray-100 text-gray-700 hover:bg-amber-100">
+                    🍹 Food Stalls
+                </button>
+                <button onclick="switchCategory('entertainment')" id="tab-entertainment" class="cat-tab-btn px-5 py-2.5 rounded-full font-bold text-sm transition-all bg-gray-100 text-gray-700 hover:bg-amber-100">
+                    🎭 Entertainment
+                </button>
+                <button onclick="switchCategory('photography')" id="tab-photography" class="cat-tab-btn px-5 py-2.5 rounded-full font-bold text-sm transition-all bg-gray-100 text-gray-700 hover:bg-amber-100">
+                    📸 Photography
+                </button>
+            </div>
+
+            <!-- Category Content Display Container -->
+            <div id="category-content-container" class="glass-card p-6 sm:p-10 rounded-3xl border border-amber-100 shadow-xl min-h-[300px]">
+                
+                <!-- Category 1: Decoration -->
+                <div id="cat-decor" class="category-panel">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="text-3xl">🎀</span>
+                        <div>
+                            <h3 class="text-2xl font-bold font-serif text-gray-900">Decoration Services</h3>
+                            <p class="text-xs text-gray-500">Custom tailored stage and venue setups for all themes</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🎂</span><span>Birthday Setup</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🏰</span><span>Wedding Stage</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>💍</span><span>Engagement Decor</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>👶</span><span>Baby Shower</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🌸</span><span>Naming Ceremony</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🏠</span><span>Housewarming</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🎉</span><span>Surprise Decor</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🎈</span><span>Theme Balloons</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🖼️</span><span>Stage & Backdrop</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🌺</span><span>Floral Decor</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🚪</span><span>Grand Entrance</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>👩‍❤️‍👨</span><span>Couple Stage</span></div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Grand Entry -->
+                <div id="cat-entry" class="category-panel hidden">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="text-3xl">✨</span>
+                        <div>
+                            <h3 class="text-2xl font-bold font-serif text-gray-900">Grand Entry & Special Effects</h3>
+                            <p class="text-xs text-gray-500">Unforgettable cold pyro and fog entries</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-4">
+                        <div class="p-3.5 rounded-xl bg-rose-50 border border-rose-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>👰</span><span>Bride & Groom Entry</span></div>
+                        <div class="p-3.5 rounded-xl bg-rose-50 border border-rose-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🚗</span><span>Car Entry Setup</span></div>
+                        <div class="p-3.5 rounded-xl bg-rose-50 border border-rose-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🎆</span><span>Pyro / Cold Pyro</span></div>
+                        <div class="p-3.5 rounded-xl bg-rose-50 border border-rose-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🌫️</span><span>Heavy Fog Effect</span></div>
+                        <div class="p-3.5 rounded-xl bg-rose-50 border border-rose-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>✨</span><span>LED Spark Effects</span></div>
+                        <div class="p-3.5 rounded-xl bg-rose-50 border border-rose-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>💃</span><span>Dance Floor Smoke</span></div>
+                        <div class="p-3.5 rounded-xl bg-rose-50 border border-rose-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🎊</span><span>Confetti Blast</span></div>
+                        <div class="p-3.5 rounded-xl bg-rose-50 border border-rose-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🌹</span><span>Flower Shower Entry</span></div>
+                        <div class="p-3.5 rounded-xl bg-rose-50 border border-rose-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>👑</span><span>Grand Welcome</span></div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Food Stalls -->
+                <div id="cat-food" class="category-panel hidden">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="text-3xl">🍹</span>
+                        <div>
+                            <h3 class="text-2xl font-bold font-serif text-gray-900">Food Stalls & Counters</h3>
+                            <p class="text-xs text-gray-500">Delicious live treat stalls for guest enjoyment</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🥤</span><span>Welcome Drinks</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🌿</span><span>Beeda Stall</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🍿</span><span>Popcorn Stall</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🍭</span><span>Sweet Candy Stall</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🥗</span><span>Fruit Salad Counter</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🧆</span><span>Panipuri Live Stall</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🍫</span><span>Chocolate Fountain</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🍨</span><span>Ice Cream Counter</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🍸</span><span>Mocktail Bar</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🧃</span><span>Juice Counter</span></div>
+                        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🥨</span><span>Live Snack Counters</span></div>
+                    </div>
+                </div>
+
+                <!-- Category 4: Entertainment -->
+                <div id="cat-entertainment" class="category-panel hidden">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="text-3xl">🎭</span>
+                        <div>
+                            <h3 class="text-2xl font-bold font-serif text-gray-900">Entertainment & Artists</h3>
+                            <p class="text-xs text-gray-500">Keep your guests thrilled and engaged</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-4">
+                        <div class="p-3.5 rounded-xl bg-purple-50 border border-purple-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🌿</span><span>Mehandi Artist</span></div>
+                        <div class="p-3.5 rounded-xl bg-purple-50 border border-purple-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>💄</span><span>Bridal Assistance</span></div>
+                        <div class="p-3.5 rounded-xl bg-purple-50 border border-purple-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🤡</span><span>Kids Entertainment</span></div>
+                        <div class="p-3.5 rounded-xl bg-purple-50 border border-purple-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🎨</span><span>Tattoo Stall</span></div>
+                        <div class="p-3.5 rounded-xl bg-purple-50 border border-purple-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🪄</span><span>Magic Show</span></div>
+                        <div class="p-3.5 rounded-xl bg-purple-50 border border-purple-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🎧</span><span>DJ & Music Setup</span></div>
+                        <div class="p-3.5 rounded-xl bg-purple-50 border border-purple-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>💃</span><span>Dance Floor Setup</span></div>
+                        <div class="p-3.5 rounded-xl bg-purple-50 border border-purple-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🎙️</span><span>Anchor Services</span></div>
+                        <div class="p-3.5 rounded-xl bg-purple-50 border border-purple-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🎯</span><span>Fun Games & Activities</span></div>
+                    </div>
+                </div>
+
+                <!-- Category 5: Photography -->
+                <div id="cat-photography" class="category-panel hidden">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="text-3xl">📸</span>
+                        <div>
+                            <h3 class="text-2xl font-bold font-serif text-gray-900">Photography & Videography</h3>
+                            <p class="text-xs text-gray-500">Capture forever memories with professional gear</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-4">
+                        <div class="p-3.5 rounded-xl bg-sky-50 border border-sky-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>📷</span><span>Studio Photoshoot</span></div>
+                        <div class="p-3.5 rounded-xl bg-sky-50 border border-sky-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>👩‍❤️‍👨</span><span>Couple Photoshoot</span></div>
+                        <div class="p-3.5 rounded-xl bg-sky-50 border border-sky-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>💒</span><span>Pre-Wedding Shoot</span></div>
+                        <div class="p-3.5 rounded-xl bg-sky-50 border border-sky-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🎉</span><span>Event Photography</span></div>
+                        <div class="p-3.5 rounded-xl bg-sky-50 border border-sky-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>✨</span><span>Candid Photography</span></div>
+                        <div class="p-3.5 rounded-xl bg-sky-50 border border-sky-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🚁</span><span>Drone Shoot</span></div>
+                        <div class="p-3.5 rounded-xl bg-sky-50 border border-sky-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🖼️</span><span>Instant Photo Booth</span></div>
+                        <div class="p-3.5 rounded-xl bg-sky-50 border border-sky-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>🎥</span><span>Cinematic Video Shoot</span></div>
+                        <div class="p-3.5 rounded-xl bg-sky-50 border border-sky-200/60 font-semibold text-gray-800 text-sm flex items-center space-x-2"><span>📹</span><span>Traditional Video</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: ENQUIRY FORM WITH DATE PICKER & PACKAGE SELECTOR (From Screenshot 1000003683, 3684, 3685, 3686) -->
+    <section id="enquiry" class="py-16 bg-soft-gradient relative">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            
+            <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-2xl border border-amber-100">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold font-serif text-gray-900">
+                        Send an Enquiry 🥳
+                    </h2>
+                    <p class="text-xs sm:text-sm font-bold text-amber-600 mt-2 tracking-wider">
+                        WE'LL REPLY WITHIN 24 HOURS!
+                    </p>
+                </div>
+
+                <form id="enquiry-form" onsubmit="handleEnquirySubmit(event)" class="space-y-5">
+                    
+                    <!-- Your Name -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-purple-900 mb-1">Your Name *</label>
+                        <input type="text" id="eq-name" required placeholder="e.g. Saravanan" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none text-sm font-medium transition">
+                    </div>
+
+                    <!-- Phone / WhatsApp Number -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-purple-900 mb-1">WhatsApp Number *</label>
+                        <input type="tel" id="eq-phone" required placeholder="e.g. +91 9876543210" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none text-sm font-medium transition">
+                    </div>
+
+                    <!-- Event Type Dropdown -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-purple-900 mb-1">Event Type *</label>
+                        <select id="eq-event" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none text-sm font-medium bg-white transition">
+                            <option value="" disabled selected>🎉 Select event type</option>
+                            <option value="Wedding 🏰">Wedding 🏰</option>
+                            <option value="Birthday Party 🎂">Birthday Party 🎂</option>
+                            <option value="Engagement 💍">Engagement 💍</option>
+                            <option value="Baby Shower 👶">Baby Shower 👶</option>
+                            <option value="Naming Ceremony 🌸">Naming Ceremony 🌸</option>
+                            <option value="Housewarming 🏠">Housewarming 🏠</option>
+                            <option value="Corporate Event 💼">Corporate Event 💼</option>
+                            <option value="Other 🎊">Other 🎊</option>
+                        </select>
+                    </div>
+
+                    <!-- Package Dropdown -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-purple-900 mb-1">Package *</label>
+                        <select id="eq-package" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none text-sm font-medium bg-white transition">
+                            <option value="" disabled selected>📦 Select package</option>
+                            <option value="Basic Package 🌸">Basic Package 🌸 (Essential decor & entry)</option>
+                            <option value="Premium Package ✨">Premium Package ✨ (Decor + Pyro + Stalls)</option>
+                            <option value="Luxury Package 👑">Luxury Package 👑 (Full Event + AI Photo Booth)</option>
+                            <option value="Custom Package 🌈">Custom Package 🌈 (Personalized requirements)</option>
+                        </select>
+                    </div>
+
+                    <!-- Event Date -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-purple-900 mb-1">Event Date *</label>
+                        <input type="date" id="eq-date" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none text-sm font-medium bg-white transition">
+                    </div>
+
+                    <!-- Message / Special Demands -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-purple-900 mb-1">Your Message or Requirements</label>
+                        <textarea id="eq-message" rows="3" placeholder="Tell us about your venue, special demands, or themes..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none text-sm font-medium transition"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full bg-gradient-to-r from-rose-500 via-amber-500 to-purple-600 hover:opacity-95 text-white font-extrabold py-4 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 text-base sm:text-lg flex items-center justify-center space-x-2">
+                        <span>🎉 SEND MY ENQUIRY! 🎊</span>
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-24 lg:pb-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold font-serif text-amber-400">SSM Party Planner</h3>
+                    <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+                        Bringing joy, color, and unforgettable magic to every celebration in Tamil Nadu! Specializing in Stage Decor, Food Stalls, Cold Pyro Entries, and AI Photo Booths.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-gray-300 mb-3">Quick Contact</h4>
+                    <ul class="text-xs text-gray-400 space-y-2">
+                        <li>📞 Phone: <a href="tel:+919566047449" class="text-amber-400 hover:underline">+91 95660 47449</a></li>
+                        <li>💬 WhatsApp: <a href="https://wa.me/919566047449" class="text-amber-400 hover:underline">+91 95660 47449</a></li>
+                        <li>📸 Instagram: <a href="https://www.instagram.com/ssmpartyplanner?obrf=cTBiczEydG40dmdm" target="_blank" class="text-rose-400 hover:underline">@ssmpartyplanner</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-gray-300 mb-3">Location</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Serving Chennai & across Tamil Nadu.<br>Available 7 days a week for consultations!
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
+                © 2026 SSM Party Planner. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING ACTION BUTTONS (CALL & WHATSAPP) -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-3 items-end">
+        
+        <!-- Direct Phone Call Button -->
+        <a href="tel:+919566047449" title="Call Now" class="w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl transition transform hover:scale-110 border-2 border-white">
+            <i class="fas fa-phone-alt text-2xl"></i>
+        </a>
+
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/919566047449?text=Hi%20SSM%20Party%20Planner,%20I'd%20like%20to%20enquire%20about%20event%20booking!" target="_blank" title="Chat on WhatsApp" class="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-2xl transition transform hover:scale-110 border-2 border-white">
+            <i class="fab fa-whatsapp text-3xl"></i>
+        </a>
+
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Category Tab Switcher Logic
+        function switchCategory(catKey) {
+            // Hide all category content panels
+            const panels = document.querySelectorAll('.category-panel');
+            panels.forEach(p => p.classList.add('hidden'));
+
+            // Show target panel
+            const target = document.getElementById('cat-' + catKey);
+            if (target) {
+                target.classList.remove('hidden');
+            }
+
+            // Update tab button styles
+            const tabs = document.querySelectorAll('.cat-tab-btn');
+            tabs.forEach(t => {
+                t.classList.remove('bg-gradient-to-r', 'from-amber-500', 'to-rose-500', 'text-white', 'shadow-sm');
+                t.classList.add('bg-gray-100', 'text-gray-700');
+            });
+
+            const activeTab = document.getElementById('tab-' + catKey);
+            if (activeTab) {
+                activeTab.classList.remove('bg-gray-100', 'text-gray-700');
+                activeTab.classList.add('bg-gradient-to-r', 'from-amber-500', 'to-rose-500', 'text-white', 'shadow-sm');
+            }
+        }
+
+        // Format and Submit Enquiry to WhatsApp
+        function handleEnquirySubmit(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('eq-name').value;
+            const phone = document.getElementById('eq-phone').value;
+            const eventType = document.getElementById('eq-event').value;
+            const packageChoice = document.getElementById('eq-package').value;
+            const eventDate = document.getElementById('eq-date').value;
+            const message = document.getElementById('eq-message').value;
+
+            // Formatted message
+            const text = `🎉 *NEW EVENT ENQUIRY - SSM PARTY PLANNER* 🎉%0A%0A` +
+                         `👤 *Name:* ${encodeURIComponent(name)}%0A` +
+                         `📞 *Phone:* ${encodeURIComponent(phone)}%0A` +
+                         `🎈 *Event Type:* ${encodeURIComponent(eventType)}%0A` +
+                         `📦 *Package:* ${encodeURIComponent(packageChoice)}%0A` +
+                         `📅 *Event Date:* ${encodeURIComponent(eventDate)}%0A` +
+                         `💬 *Message:* ${encodeURIComponent(message || 'N/A')}`;
+
+            window.open(`https://wa.me/919566047449?text=${text}`, '_blank');
+        }
+
+        // Set default minimum date for DatePicker to today
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateInput = document.getElementById('eq-date');
+            if (dateInput) {
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.setAttribute('min', today);
+            }
+        });
+    </script>
+</body>
+</html>
